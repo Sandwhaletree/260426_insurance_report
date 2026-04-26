@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>癌症終身險保障規劃建議書｜35歲男性</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
+:root {
+  --navy:       #0D1B2E;
+  --navy-mid:   #1A3050;
+  --navy-light: #2A4A70;
+  --gold:       #C9A84C;
+  --gold-light: #E8C97A;
+  --gold-pale:  #F9F2DF;
+  --white:      #FFFFFF;
+  --off-white:  #F8F7F4;
+  --cream:      #F2EDE4;
+  --text-dark:  #1A1A1A;
+  --text-mid:   #3D3D3D;
+  --text-mute:  #6B6B6B;
+  --border:     #D8CFC0;
+  --blue-soft:  #EBF1F8;
+  --shadow:     0 2px 20px rgba(13,27,46,.07);
+  --shadow-lg:  0 6px 40px rgba(13,27,46,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Noto Serif TC','Yu Mincho','游明朝体','YuMincho','ヒラギノ明朝 ProN',serif;
+  background:var(--off-white);color:var(--text-dark);font-size:14px;line-height:1.85;
+}
+
+/* highlight = 螢光黃底粗體放大 */
+.hl{
+  background:#FFE566;
+  font-weight:700;
+  font-size:15.5px;
+  padding:0 3px;
+  border-radius:2px;
+  color:#1A1A1A;
+}
+
+/* ── COVER ── */
+.cover{background:var(--navy);min-height:240px;padding:52px 60px 44px;position:relative;overflow:hidden;}
+.cover::before{content:'';position:absolute;top:0;right:0;width:420px;height:100%;background:linear-gradient(135deg,transparent 35%,rgba(201,168,76,.13) 100%);}
+.cover::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold) 0%,var(--gold-light) 50%,var(--gold) 100%);}
+.cover-tag{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;margin-bottom:16px;}
+.cover-title{font-size:28px;font-weight:600;color:var(--white);letter-spacing:.04em;line-height:1.3;margin-bottom:8px;}
+.cover-sub{font-family:'Noto Sans TC',sans-serif;font-size:13px;color:rgba(255,255,255,.5);letter-spacing:.05em;}
+.cover-meta{display:flex;gap:28px;margin-top:28px;flex-wrap:wrap;}
+.cover-meta-item label{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:.12em;color:var(--gold);display:block;margin-bottom:3px;}
+.cover-meta-item span{font-size:13px;color:var(--white);font-weight:500;}
+
+/* ── NAV ── */
+.nav{background:var(--navy-mid);padding:0 60px;display:flex;gap:0;border-bottom:1px solid rgba(201,168,76,.3);position:sticky;top:0;z-index:100;}
+.nav a{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:.1em;color:rgba(255,255,255,.5);text-decoration:none;padding:13px 16px;display:block;transition:color .2s;border-bottom:2px solid transparent;}
+.nav a:hover{color:var(--gold-light);border-bottom-color:var(--gold);}
+
+/* ── LAYOUT ── */
+.container{max-width:960px;margin:0 auto;padding:0 40px;}
+.section{padding:44px 0 36px;}
+.section+.section{border-top:1px solid var(--border);}
+
+/* ── SECTION HEADER ── */
+.sec-header{margin-bottom:10px;}
+.sec-tag{display:inline-block;font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:.14em;color:var(--gold);padding:3px 10px;border:1px solid var(--gold);border-radius:2px;margin-bottom:8px;}
+.sec-title{font-size:21px;font-weight:600;color:var(--navy);letter-spacing:.03em;margin-bottom:4px;}
+.sec-summary{font-family:'Noto Sans TC',sans-serif;font-size:13px;color:var(--white);background:var(--navy);border-left:4px solid var(--gold);padding:10px 16px;border-radius:0 4px 4px 0;margin-bottom:24px;letter-spacing:.02em;font-weight:500;}
+.sec-desc{font-family:'Noto Sans TC',sans-serif;font-size:12px;color:var(--text-mute);margin-bottom:20px;}
+
+/* ── STAT CARDS ── */
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px;}
+.stat-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:16px 14px;text-align:center;}
+.stat-card.gold{border-top:3px solid var(--gold);}
+.stat-num{font-size:26px;font-weight:700;color:var(--navy);line-height:1.1;margin-bottom:4px;}
+.stat-num span{font-size:14px;font-weight:500;}
+.stat-label{font-family:'Noto Sans TC',sans-serif;font-size:11px;color:var(--text-mute);line-height:1.5;}
+
+/* ── CANCER CHART (男性十大) ── */
+.cancer-rank{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;}
+.rank-item{display:flex;align-items:center;gap:10px;background:var(--white);border:1px solid var(--border);border-radius:5px;padding:8px 12px;}
+.rank-item.top{border-left:3px solid var(--gold);}
+.rank-num{font-family:'Noto Sans TC',sans-serif;font-size:11px;font-weight:700;color:var(--gold);width:18px;flex-shrink:0;}
+.rank-name{font-size:13px;font-weight:500;color:var(--navy);flex:1;}
+.rank-note{font-family:'Noto Sans TC',sans-serif;font-size:10px;color:var(--text-mute);}
+
+/* ── COST TABLE ── */
+.cost-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
+.cost-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:14px 16px;}
+.cost-title{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:6px;}
+.cost-range{font-size:19px;font-weight:700;color:#A32020;margin-bottom:4px;}
+.cost-note{font-family:'Noto Sans TC',sans-serif;font-size:11px;color:var(--text-mute);line-height:1.6;}
+
+/* ── INSURANCE STRATEGY ── */
+.strategy-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;}
+.strategy-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:18px 20px;}
+.strategy-card.primary{border-top:3px solid var(--gold);}
+.strategy-card.secondary{border-top:3px solid var(--navy-light);}
+.strategy-icon{font-size:22px;margin-bottom:8px;}
+.strategy-title{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:6px;}
+.strategy-body{font-family:'Noto Sans TC',sans-serif;font-size:12.5px;color:var(--text-mid);line-height:1.75;}
+.strategy-examples{font-family:'Noto Sans TC',sans-serif;font-size:11.5px;color:var(--text-mute);margin-top:8px;padding-top:8px;border-top:1px dashed var(--border);}
+
+/* ── DIFF TABLE (癌症險 vs 重大傷病) ── */
+.diff-table{width:100%;border-collapse:collapse;font-size:12.5px;margin-bottom:14px;}
+.diff-table th{padding:10px 14px;background:var(--navy);color:var(--white);font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:.06em;font-weight:500;}
+.diff-table td{padding:9px 14px;border-bottom:1px solid var(--border);font-family:'Noto Sans TC',sans-serif;vertical-align:top;line-height:1.65;}
+.diff-table tr:nth-child(even) td{background:var(--off-white);}
+.diff-table tr:last-child td{border-bottom:none;}
+.diff-table td:first-child{font-weight:500;color:var(--text-mid);}
+.diff-ok{color:#1A6B3A;font-weight:600;}
+.diff-warn{color:#8A5000;font-weight:600;}
+.diff-no{color:#A32020;}
+
+/* ── EARLY CANCER EXAMPLES ── */
+.early-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
+.early-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:14px 16px;}
+.early-card.common{border-left:3px solid var(--gold);}
+.early-type{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:.08em;color:var(--gold);margin-bottom:4px;}
+.early-name{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:6px;}
+.early-grade{font-family:'Noto Sans TC',sans-serif;font-size:11px;padding:2px 8px;border-radius:20px;display:inline-block;margin-bottom:6px;}
+.grade-init{background:#EBF4FF;color:#1A5FA8;}
+.grade-mild{background:#FFF8E6;color:#8A6200;}
+.grade-heavy{background:#FFEBEB;color:#A32020;}
+.early-claim{font-family:'Noto Sans TC',sans-serif;font-size:12px;color:var(--text-mid);line-height:1.7;}
+.early-amt{font-size:15px;font-weight:700;color:#1A4A8A;margin-top:4px;}
+
+/* ── VIDEO CARD ── */
+.video-card{background:var(--navy);border-radius:6px;padding:16px 20px;display:flex;align-items:center;gap:16px;margin-bottom:20px;cursor:pointer;text-decoration:none;}
+.video-thumb{width:60px;height:42px;background:#C9A84C;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.video-play{width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent var(--navy);}
+.video-info{flex:1;}
+.video-label{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:.1em;color:var(--gold);margin-bottom:3px;}
+.video-title{font-size:13px;font-weight:500;color:var(--white);line-height:1.4;}
+.video-note{font-family:'Noto Sans TC',sans-serif;font-size:11px;color:rgba(255,255,255,.5);margin-top:2px;}
+
+/* ── NEED CARDS ── */
+.need-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px;}
+.need-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:18px 20px;}
+.need-card.p1{border-top:3px solid var(--gold);}
+.need-card.p2{border-top:3px solid var(--navy-light);}
+.need-card.p3{border-top:3px solid var(--border);}
+.need-rank{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:.1em;color:var(--gold);margin-bottom:6px;}
+.need-title{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px;}
+.need-body{font-family:'Noto Sans TC',sans-serif;font-size:12px;color:var(--text-mute);line-height:1.75;}
+
+/* ── GRADE TABLE ── */
+.grade-table{width:100%;border-collapse:collapse;}
+.grade-table th{background:var(--navy);color:var(--white);font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:.06em;padding:10px 14px;text-align:left;font-weight:500;}
+.grade-table td{padding:10px 14px;border-bottom:1px solid var(--border);font-size:13px;vertical-align:top;line-height:1.65;}
+.grade-table tr:nth-child(even) td{background:var(--off-white);}
+.grade-table tr:last-child td{border-bottom:none;}
+.grade-pill{display:inline-block;font-family:'Noto Sans TC',sans-serif;font-size:10px;padding:2px 9px;border-radius:20px;font-weight:500;}
+.pill-init{background:#EBF4FF;color:#1A5FA8;}
+.pill-mild{background:#FFF8E6;color:#8A6200;}
+.pill-heavy{background:#FFEBEB;color:#A32020;}
+.pill-spec{background:#F0FFF4;color:#1A6B3A;}
+
+/* ── CMP TABLE ── */
+.cmp-wrap{overflow-x:auto;}
+.cmp-table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:640px;}
+.cmp-table th{padding:10px 14px;text-align:center;font-weight:600;font-size:12px;border:1px solid var(--border);letter-spacing:.04em;}
+.cmp-table th.hd-label{background:var(--navy);color:var(--white);text-align:left;width:110px;font-family:'Noto Sans TC',sans-serif;font-size:11px;}
+.cmp-table th.hd-shin{background:#E8F0FA;color:#1A3050;border-bottom:3px solid #2A5AA0;}
+.cmp-table th.hd-glob{background:#EAF3EE;color:#1A4030;border-bottom:3px solid #2E7D52;}
+.cmp-table th.hd-farr{background:var(--gold-pale);color:#5C3D00;border-bottom:3px solid var(--gold);}
+.cmp-table td{padding:9px 14px;border:1px solid var(--border);vertical-align:top;line-height:1.65;font-family:'Noto Sans TC',sans-serif;}
+.cmp-table td.row-lbl{font-size:11px;font-weight:500;color:var(--text-mute);background:var(--off-white);letter-spacing:.04em;}
+.cmp-table td.hi{color:#1A4A8A;font-weight:600;}
+.cmp-table td.lo{color:var(--text-mute);}
+.cmp-table td.warn{color:#8A5000;}
+.cmp-table td.best{background:#FEFAE8;}
+.cmp-table .sub{display:block;font-size:10.5px;color:var(--text-mute);margin-top:2px;font-weight:400;}
+.win-badge{display:inline-block;font-family:'Noto Sans TC',sans-serif;font-size:9px;font-weight:700;letter-spacing:.06em;padding:2px 7px;border-radius:2px;background:var(--gold);color:var(--navy);margin-left:5px;vertical-align:middle;}
+.tag{display:inline-block;font-family:'Noto Sans TC',sans-serif;font-size:9.5px;padding:1px 6px;border-radius:2px;margin:1px 2px 1px 0;font-weight:500;}
+.tag-b{background:#E6EFF8;color:#1A3F7A;}
+.tag-g{background:#E4F3EA;color:#1A5C35;}
+.tag-y{background:#FBF3E0;color:#7A5000;}
+.tag-r{background:#FAECEC;color:#8A1F1F;}
+.tag-n{background:var(--off-white);color:var(--text-mute);border:1px solid var(--border);}
+
+/* ── PRODUCT LIST ── */
+.co-block{margin-bottom:20px;}
+.co-header{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-radius:5px 5px 0 0;color:var(--white);}
+.co-header.shin{background:#1A3A6A;}
+.co-header.glob{background:#1A4A30;}
+.co-header.farr{background:#5C3D00;}
+.co-name{font-size:14px;font-weight:600;letter-spacing:.04em;}
+.co-total{font-family:'Noto Sans TC',sans-serif;font-size:12px;color:rgba(255,255,255,.65);}
+.co-total span{color:var(--gold-light);font-weight:600;}
+.prod-row{border:1px solid var(--border);border-top:none;padding:12px 16px;background:var(--white);}
+.prod-row:last-child{border-radius:0 0 5px 5px;}
+.prod-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:7px;}
+.prod-name{font-size:13px;font-weight:600;color:var(--navy);}
+.prod-meta{font-family:'Noto Sans TC',sans-serif;font-size:11px;color:var(--text-mute);margin-top:2px;}
+.prod-right{text-align:right;flex-shrink:0;margin-left:12px;}
+.prod-price{font-size:16px;font-weight:600;color:var(--navy);}
+.prod-period{font-family:'Noto Sans TC',sans-serif;font-size:10px;color:var(--text-mute);}
+.claims-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:3px 10px;margin-top:8px;}
+.cl-item{display:flex;justify-content:space-between;font-family:'Noto Sans TC',sans-serif;font-size:11.5px;padding:2px 0;border-bottom:1px dashed var(--border);}
+.cl-item:last-child{border-bottom:none;}
+.cl-lbl{color:var(--text-mute);}
+.cl-val{font-weight:600;color:var(--text-dark);}
+.cl-val.hi{color:#1A4A8A;}
+.cl-val.lo{color:var(--text-mute);font-weight:400;}
+.cl-val.warn{color:#8A5000;}
+
+/* ── SCENARIO ── */
+.sc-card{background:var(--white);border:1px solid var(--border);border-radius:6px;box-shadow:var(--shadow);margin-bottom:20px;overflow:hidden;}
+.sc-head{padding:14px 20px;background:var(--navy);display:flex;justify-content:space-between;align-items:flex-start;gap:12px;}
+.sc-title{font-size:14px;font-weight:600;color:var(--white);letter-spacing:.02em;}
+.sc-subtitle{font-family:'Noto Sans TC',sans-serif;font-size:11px;color:rgba(255,255,255,.5);margin-top:3px;}
+.sc-link{font-family:'Noto Sans TC',sans-serif;font-size:10px;color:var(--gold-light);text-decoration:none;white-space:nowrap;flex-shrink:0;margin-top:3px;letter-spacing:.05em;border-bottom:1px solid rgba(201,168,76,.4);padding-bottom:1px;}
+.sc-body{padding:18px 20px;}
+.case-box{background:var(--blue-soft);border-left:3px solid #2A5AA0;border-radius:0 4px 4px 0;padding:10px 14px;margin-bottom:14px;font-family:'Noto Sans TC',sans-serif;font-size:12px;color:var(--text-mid);line-height:1.75;}
+.case-box strong{color:var(--navy);}
+.timeline{position:relative;padding-left:22px;margin-bottom:14px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:1px;background:linear-gradient(to bottom,var(--gold),var(--border));}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-dot{position:absolute;left:-22px;top:4px;width:9px;height:9px;border-radius:50%;background:var(--gold);border:2px solid var(--white);box-shadow:0 0 0 1.5px var(--gold);}
+.tl-dot.warn{background:#C05000;box-shadow:0 0 0 1.5px #C05000;}
+.tl-dot.ok{background:#1A7A40;box-shadow:0 0 0 1.5px #1A7A40;}
+.tl-time{font-family:'Noto Sans TC',sans-serif;font-size:10px;font-weight:500;color:var(--text-mute);letter-spacing:.05em;}
+.tl-desc{font-family:'Noto Sans TC',sans-serif;font-size:12.5px;color:var(--text-dark);margin-top:1px;line-height:1.6;}
+.tl-money{font-family:'Noto Sans TC',sans-serif;font-size:12px;font-weight:600;color:#1A4A8A;margin-top:2px;}
+.claim-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;}
+.cs-item{background:var(--off-white);border:1px solid var(--border);border-radius:4px;padding:8px 10px;text-align:center;}
+.cs-co{font-family:'Noto Sans TC',sans-serif;font-size:10px;color:var(--text-mute);margin-bottom:4px;}
+.cs-amt{font-size:16px;font-weight:600;color:var(--text-dark);}
+.cs-amt.win{color:#1A4A8A;}
+.total-bar{display:flex;justify-content:space-between;align-items:center;background:var(--navy);border-radius:4px;padding:10px 16px;margin-top:10px;}
+.total-lbl{font-family:'Noto Sans TC',sans-serif;font-size:11px;color:rgba(255,255,255,.65);}
+.total-amt{font-size:22px;font-weight:700;color:var(--gold-light);}
+.total-tag{font-family:'Noto Sans TC',sans-serif;font-size:10px;font-weight:700;letter-spacing:.06em;padding:3px 9px;background:var(--gold);color:var(--navy);border-radius:2px;}
+
+/* ── CARD / NOTICE ── */
+.card{background:var(--white);border:1px solid var(--border);border-radius:6px;box-shadow:var(--shadow);padding:20px 24px;margin-bottom:16px;}
+.card-gold{border-left:3px solid var(--gold);}
+.notice{background:var(--gold-pale);border:1px solid #D9C08A;border-radius:5px;padding:14px 18px;font-family:'Noto Sans TC',sans-serif;font-size:11.5px;color:#5C3D00;line-height:1.85;margin-top:20px;}
+.notice strong{color:#3D2800;}
+
+/* ── FOOTER ── */
+.footer{background:var(--navy);padding:28px 60px;margin-top:48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-text{font-family:'Noto Sans TC',sans-serif;font-size:11px;color:rgba(255,255,255,.4);line-height:1.85;}
+.footer-gold{font-family:'Noto Sans TC',sans-serif;font-size:11px;color:var(--gold);letter-spacing:.1em;text-align:right;}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-tag">CANCER INSURANCE PLANNING REPORT</div>
+  <div class="cover-title">癌症終身險保障規劃建議書</div>
+  <div class="cover-sub">為您量身規劃｜了解癌症風險，做出最適合您的保障決策</div>
+  <div class="cover-meta">
+    <div class="cover-meta-item"><label>被保險人</label><span>35歲 男性</span></div>
+    <div class="cover-meta-item"><label>報告日期</label><span>2026年4月</span></div>
+    <div class="cover-meta-item"><label>比較方案</label><span>新光 ／ 全球 ／ 遠雄</span></div>
+    <div class="cover-meta-item"><label>核心保障需求</label><span>前期癌症即賠・等待期最短</span></div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#overview">癌症概況</a>
+  <a href="#strategy">保障策略</a>
+  <a href="#need">您的需求</a>
+  <a href="#grade">癌症分級</a>
+  <a href="#compare">方案比較</a>
+  <a href="#products">產品明細</a>
+  <a href="#scenarios">理賠情境</a>
+</nav>
+
+<div class="container">
+
+<!-- ══════════════════════════════════
+  SECTION 0：2026 癌症概況
+══════════════════════════════════ -->
+<div class="section" id="overview">
+  <div class="sec-header">
+    <div class="sec-tag">SECTION 01</div>
+    <div class="sec-title">2026年台灣癌症概況</div>
+  </div>
+  <div class="sec-summary">📌 每3分48秒就有1人被診斷為癌症——這不是別人的故事，提早布局保障，才是對自己和家人最好的守護。</div>
+
+  <!-- 統計數字 -->
+  <div class="stat-row">
+    <div class="stat-card gold">
+      <div class="stat-num">每<span>3分48秒</span></div>
+      <div class="stat-label">就有1人罹癌<br>（112年衛福部癌症登記報告）</div>
+    </div>
+    <div class="stat-card gold">
+      <div class="stat-num">13.8<span>萬人</span></div>
+      <div class="stat-label">112年新發生癌症人數<br>較前一年增加7,758人</div>
+    </div>
+    <div class="stat-card gold">
+      <div class="stat-num">5.4<span>萬人</span></div>
+      <div class="stat-label">2024年因癌症死亡人數<br>占總死亡人數近三成</div>
+    </div>
+    <div class="stat-card gold">
+      <div class="stat-num">42<span>年</span></div>
+      <div class="stat-label">癌症蟬聯國人十大死因第一名<br>從未讓出榜首</div>
+    </div>
+  </div>
+
+  <!-- 男性十大癌症 -->
+  <div style="margin-bottom:12px;">
+    <div style="font-size:13px;font-weight:600;color:var(--navy);margin-bottom:10px;">▌ 男性十大癌症發生率排行（112年，含您最相關的癌別）</div>
+    <div class="cancer-rank">
+      <div class="rank-item top"><span class="rank-num">01</span><span class="rank-name"><span class="hl">大腸癌</span></span><span class="rank-note">標準化發生率連14年居冠，男性最高風險</span></div>
+      <div class="rank-item top"><span class="rank-num">02</span><span class="rank-name"><span class="hl">肺癌</span></span><span class="rank-note">死亡率第一，不抽菸者亦高風險</span></div>
+      <div class="rank-item top"><span class="rank-num">03</span><span class="rank-name">攝護腺癌</span><span class="rank-note">男性特有，發生率持續上升</span></div>
+      <div class="rank-item top"><span class="rank-num">04</span><span class="rank-name"><span class="hl">口腔癌</span></span><span class="rank-note">男性為女性的10倍，35歲族群好發</span></div>
+      <div class="rank-item"><span class="rank-num">05</span><span class="rank-name"><span class="hl">肝癌</span></span><span class="rank-note">死亡率第二，B肝帶原高風險</span></div>
+      <div class="rank-item"><span class="rank-num">06</span><span class="rank-name">食道癌</span><span class="rank-note">男性為女性的11倍，吸菸飲酒相關</span></div>
+      <div class="rank-item"><span class="rank-num">07</span><span class="rank-name">胃癌</span><span class="rank-note">幽門桿菌感染為主要原因</span></div>
+      <div class="rank-item"><span class="rank-num">08</span><span class="rank-name">皮膚癌</span><span class="rank-note">紫外線暴露及免疫缺乏者較高風險</span></div>
+      <div class="rank-item"><span class="rank-num">09</span><span class="rank-name">白血病</span><span class="rank-note">血液癌，各年齡層均可能發生</span></div>
+      <div class="rank-item"><span class="rank-num">10</span><span class="rank-name">非何杰金氏淋巴瘤</span><span class="rank-note">淋巴系統惡性腫瘤</span></div>
+    </div>
+  </div>
+
+  <!-- 治療費用 -->
+  <div style="font-size:13px;font-weight:600;color:var(--navy);margin-bottom:10px;">▌ 2026年主要癌症治療自費費用參考</div>
+  <div class="cost-grid">
+    <div class="cost-card">
+      <div class="cost-title">標靶藥物治療</div>
+      <div class="cost-range">50～200萬/年</div>
+      <div class="cost-note">健保僅部分給付，口服標靶每月約5-15萬元自費，EGFR、HER2等標靶藥為主</div>
+    </div>
+    <div class="cost-card">
+      <div class="cost-title">免疫細胞治療</div>
+      <div class="cost-range">100～1,400萬/療程</div>
+      <div class="cost-note">CAR-T最高達1,400萬；免疫檢查點抑制劑健保給付者一年約300-600萬</div>
+    </div>
+    <div class="cost-card">
+      <div class="cost-title">放射線治療</div>
+      <div class="cost-range">14～90萬/月</div>
+      <div class="cost-note">質子刀每月30-90萬；螺旋刀約14-35萬；達文西手術8-45萬</div>
+    </div>
+  </div>
+
+  <div class="card" style="background:var(--gold-pale);border-color:#D9C08A;">
+    <span style="font-family:'Noto Sans TC',sans-serif;font-size:13px;color:#5C3D00;line-height:1.85;">
+      💡 <strong>重要提醒：</strong>台灣健保雖提供基礎癌症治療，但<span class="hl">超過70%的新型癌症治療（標靶、免疫、質子）屬於門診自費項目</span>，健保給付有限。一旦確診，面臨的不只是身體上的挑戰，更是龐大的財務壓力——<strong>提前規劃癌症保障，才能在確診那一刻擁有選擇最好治療的能力</strong>。
+    </span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+  SECTION 1：保障策略說明
+══════════════════════════════════ -->
+<div class="section" id="strategy">
+  <div class="sec-header">
+    <div class="sec-tag">SECTION 02</div>
+    <div class="sec-title">癌症保障策略：怎麼搭配最有效？</div>
+  </div>
+  <div class="sec-summary">📌 「一次給付型」解決確診當下的立即財務壓力；「療程型」持續補充住院與治療期間的各項花費——兩種搭配，才是最完整的防癌佈局。</div>
+
+  <!-- 延伸影片 -->
+  <a class="video-card" href="https://www.youtube.com/watch?v=FtlU59Tx_e0&t=343s" target="_blank">
+    <div class="video-thumb"><div class="video-play"></div></div>
+    <div class="video-info">
+      <div class="video-label">延伸學習影片</div>
+      <div class="video-title">癌症險怎麼買？一次給付 vs 療程型選擇攻略</div>
+      <div class="video-note">點擊前往 YouTube 觀看完整說明 →</div>
+    </div>
+  </a>
+
+  <!-- 兩種策略 -->
+  <div class="strategy-row">
+    <div class="strategy-card primary">
+      <div class="strategy-icon">💰</div>
+      <div class="strategy-title">一次給付型（主力）</div>
+      <div class="strategy-body">確診當下，<span class="hl">立即給付一大筆保險金</span>，不管你花在哪裡、用什麼治療方式，全由您自主決定。這筆錢可以用來支付高額自費標靶藥、聘請看護、補貼停工期間的收入損失。<br><br><strong>適合應付：</strong>確診的立即衝擊、自費新型療法、生活費補貼</div>
+      <div class="strategy-examples">💊 例如：確診肺癌第一期，當天申請→收到100-265萬，立刻可以去選最好的治療</div>
+    </div>
+    <div class="strategy-card secondary">
+      <div class="strategy-icon">🏥</div>
+      <div class="strategy-title">療程型（輔助補充）</div>
+      <div class="strategy-body">依照實際發生的<span class="hl">每次住院、每次手術、每次化放療</span>來分項理賠，能持續補充治療過程中的零散費用支出。適合住院天數多、療程長的癌症（如口腔癌、大腸癌手術後化療）。<br><br><strong>適合應付：</strong>住院日額、手術費、化療放療門診費</div>
+      <div class="strategy-examples">🔬 例如：術後住院14天＋30次門診放療→每次申請，累積補貼數萬元</div>
+    </div>
+  </div>
+
+  <!-- 癌症險 vs 重大傷病險差異 -->
+  <div style="font-size:13px;font-weight:600;color:var(--navy);margin:20px 0 10px;">▌ 癌症險 vs 重大傷病險：搞清楚差在哪裡，很重要！</div>
+  <div class="card" style="padding:0;overflow:hidden;">
+    <table class="diff-table">
+      <thead><tr>
+        <th style="width:130px;">比較項目</th>
+        <th>癌症險（含療程型）</th>
+        <th>重大傷病險（如 XDE）</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td>理賠條件</td>
+          <td>醫師確診罹患癌症，依分期（初期/輕度/重度）理賠</td>
+          <td><span class="hl">必須取得健保「重大傷病卡」</span>，才能申請理賠</td>
+        </tr>
+        <tr>
+          <td>原位癌/輕度癌</td>
+          <td><span class="diff-ok">✔ 可理賠</span>（依比例，約5-20%保額）</td>
+          <td><span class="diff-no">✘ 無法理賠</span>（輕度癌症不符合重大傷病卡資格）</td>
+        </tr>
+        <tr>
+          <td>重度癌症</td>
+          <td><span class="diff-ok">✔ 可理賠</span>（100%保額一次給付）</td>
+          <td><span class="diff-ok">✔ 可理賠</span>（全額給付，不打折）</td>
+        </tr>
+        <tr>
+          <td>給付方式</td>
+          <td>按癌症分期比例一次給付，或依療程逐項給付</td>
+          <td>確診取得傷病卡後，全額一次給付</td>
+        </tr>
+        <tr>
+          <td>最佳搭配</td>
+          <td colspan="2" style="color:var(--navy);font-weight:600;">💡 <span class="hl">癌症險負責從初期到重度全覆蓋；重大傷病險在重度癌症時加碼補充大額保障——兩者搭配才是最強組合！</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 常見初期癌症 -->
+  <div style="font-size:13px;font-weight:600;color:var(--navy);margin:20px 0 10px;">▌ 常見初期癌症理賠說明（35歲男性最可能遇到）</div>
+  <div class="early-grid">
+    <div class="early-card common">
+      <div class="early-type">好發 TOP 1</div>
+      <div class="early-name">大腸癌第一期</div>
+      <span class="early-grade grade-mild">輕度癌症（20%）</span>
+      <div class="early-claim">定期健康檢查大腸鏡發現，手術後存活率逾90%。<br><strong>注意：</strong>第一期屬輕度，不符合重大傷病卡，XDE不賠！</div>
+      <div class="early-amt">最多可領 40萬+<br><span style="font-size:11px;font-weight:400;color:var(--text-mute);">遠雄 CJ2+RQ1+XCD組合最高</span></div>
+    </div>
+    <div class="early-card common">
+      <div class="early-type">好發 TOP 2</div>
+      <div class="early-name">肝癌第一期</div>
+      <span class="early-grade grade-heavy">重度癌症（100%）</span>
+      <div class="early-claim">超音波追蹤偶然發現，B肝帶原者定期追蹤是關鍵。<br><strong>注意：</strong>肝癌一期即屬重度，可申請重大傷病卡！</div>
+      <div class="early-amt">最多可領 265萬<br><span style="font-size:11px;font-weight:400;color:var(--text-mute);">全球 PCH+XCF+XDE組合最高</span></div>
+    </div>
+    <div class="early-card common">
+      <div class="early-type">好發 TOP 3</div>
+      <div class="early-name">肺癌第一期</div>
+      <span class="early-grade grade-heavy">重度+特定部位（加碼）</span>
+      <div class="early-claim">LDCT低劑量CT早期發現，即使不抽菸也有風險。<br><strong>注意：</strong>屬全球PCH/XCF特定部位，可額外加碼！</div>
+      <div class="early-amt">最多可領 320萬<br><span style="font-size:11px;font-weight:400;color:var(--text-mute);">全球 PCH+XCF+XDE組合最高</span></div>
+    </div>
+    <div class="early-card">
+      <div class="early-type">好發 TOP 4</div>
+      <div class="early-name">口腔癌第二期</div>
+      <span class="early-grade grade-heavy">重度癌症（100%）</span>
+      <div class="early-claim">嚼檳榔/吸菸族群為主，定期口腔黏膜檢查可早期發現。住院天數長，療程型效果明顯。</div>
+      <div class="early-amt">最多可領 265萬+<br><span style="font-size:11px;font-weight:400;color:var(--text-mute);">全球 PCH+XCF+XDE組合最高</span></div>
+    </div>
+    <div class="early-card">
+      <div class="early-type">輕度案例</div>
+      <div class="early-name">原位癌（零期癌）</div>
+      <span class="early-grade grade-init">初期癌症（5%）</span>
+      <div class="early-claim">健康檢查偶然發現，原位癌尚未侵犯周邊組織，治癒率極高。僅能申請癌症險初期給付。</div>
+      <div class="early-amt">約可領 5-11萬<br><span style="font-size:11px;font-weight:400;color:var(--text-mute);">依各方案條款計算</span></div>
+    </div>
+    <div class="early-card">
+      <div class="early-type">輕度案例</div>
+      <div class="early-name">甲狀腺微乳頭狀癌</div>
+      <span class="early-grade grade-mild">輕度癌症（15-20%）</span>
+      <div class="early-claim">腫瘤≤1cm，預後極佳，手術切除後長期追蹤。屬輕度癌症，不符合重大傷病卡資格。</div>
+      <div class="early-amt">約可領 15-40萬<br><span style="font-size:11px;font-weight:400;color:var(--text-mute);">依各方案條款計算</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+  SECTION 2：您的保障需求
+══════════════════════════════════ -->
+<div class="section" id="need">
+  <div class="sec-header">
+    <div class="sec-tag">SECTION 03</div>
+    <div class="sec-title">您的保障需求確認</div>
+  </div>
+  <div class="sec-summary">📌 您最在意的是「確診後立刻有錢可以用」——這代表保障越早啟動、初期能拿到越多，這張保單就越符合您的需求。</div>
+
+  <div class="need-grid">
+    <div class="need-card p1">
+      <div class="need-rank">★ 您最在意</div>
+      <div class="need-title">前期癌症就能理賠</div>
+      <div class="need-body">無論是初期原位癌，還是輕度的第一期大腸癌，<span class="hl">確診當下就能收到一筆錢</span>，讓您馬上啟動治療，不需等到病情惡化才有保障。</div>
+    </div>
+    <div class="need-card p2">
+      <div class="need-rank">▶ 重要考量</div>
+      <div class="need-title">等待期越短越好</div>
+      <div class="need-body">保險生效後有90天等待期，期間若罹癌保險公司不賠。<span class="hl">部分終身主約前2年罹癌僅退保費</span>，而非正式保額——這個差距至關重要，選擇時務必確認。</div>
+    </div>
+    <div class="need-card p3">
+      <div class="need-rank">◎ 附加需求</div>
+      <div class="need-title">住院手術理賠補充</div>
+      <div class="need-body">癌症手術、住院日額、化療放療的門診費用也是一大筆開銷。<span class="hl">搭配療程型附約</span>，可以在一次給付的基礎上，持續補充治療費用。</div>
+    </div>
+  </div>
+
+  <div class="card card-gold">
+    <strong>為您量身說明：</strong>您希望在前期確診就能有現金應對，因此我們的規劃以<span class="hl">「一次給付型癌症險為主力」</span>，搭配重大傷病險在重度癌症時加碼，再加入療程型附約補足手術住院的缺口。以下三家方案的比較，都圍繞著這個核心需求展開。
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+  SECTION 3：癌症分級
+══════════════════════════════════ -->
+<div class="section" id="grade">
+  <div class="sec-header">
+    <div class="sec-tag">SECTION 04</div>
+    <div class="sec-title">癌症分級定義與理賠比例</div>
+  </div>
+  <div class="sec-summary">📌 保險公司的「癌症分級」直接決定您能拿多少錢——同樣是「癌症」，確診是一期大腸癌還是一期肺癌，賠的金額可能差了5倍！</div>
+
+  <div class="card" style="padding:0;overflow:hidden;margin-bottom:14px;">
+    <table class="grade-table">
+      <thead>
+        <tr>
+          <th style="width:120px;">分級</th>
+          <th style="width:90px;">理賠比例</th>
+          <th>保險條款定義</th>
+          <th>35歲男性常見案例</th>
+          <th style="width:140px;">套用本次方案（保額100萬）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="grade-pill pill-init">初期癌症</span><br><small style="font-size:10px;color:var(--text-mute);">低侵襲性</small></td>
+          <td style="text-align:center;font-weight:700;color:#1A4A8A;font-size:16px;">5%</td>
+          <td style="font-family:'Noto Sans TC',sans-serif;font-size:12px;">原位癌（零期癌）、第一期惡性類癌、第二期以下非惡性黑色素瘤皮膚癌</td>
+          <td style="font-family:'Noto Sans TC',sans-serif;font-size:12px;">子宮頸原位癌、皮膚癌早期</td>
+          <td style="text-align:center;"><span class="hl">5萬元</span></td>
+        </tr>
+        <tr>
+          <td><span class="grade-pill pill-mild">輕度癌症</span><br><small style="font-size:10px;color:var(--text-mute);">低侵襲性</small></td>
+          <td style="text-align:center;font-weight:700;color:#8A6200;font-size:16px;">15–20%</td>
+          <td style="font-family:'Noto Sans TC',sans-serif;font-size:12px;">第一期乳癌、<strong>第一期大腸直腸癌</strong>、第一期前列腺癌、甲狀腺微乳頭狀癌（≤1cm）等共10項</td>
+          <td style="font-family:'Noto Sans TC',sans-serif;font-size:12px;"><span class="hl">大腸癌一期（35歲男性好發）</span>、甲狀腺微小癌</td>
+          <td style="text-align:center;"><span class="hl">15–20萬元</span></td>
+        </tr>
+        <tr>
+          <td><span class="grade-pill pill-heavy">重度癌症</span><br><small style="font-size:10px;color:var(--text-mute);">侵襲性</small></td>
+          <td style="text-align:center;font-weight:700;color:#A32020;font-size:16px;">100%</td>
+          <td style="font-family:'Noto Sans TC',sans-serif;font-size:12px;">初期及輕度以外的所有癌症。<strong><span class="hl">肝癌、肺癌第一期即屬重度！</span></strong></td>
+          <td style="font-family:'Noto Sans TC',sans-serif;font-size:12px;"><span class="hl">肝癌一期、肺癌一期、大腸癌二期以上、口腔癌二期以上</span></td>
+          <td style="text-align:center;font-weight:700;color:#A32020;font-size:16px;">100萬元</td>
+        </tr>
+        <tr>
+          <td><span class="grade-pill pill-spec">特定部位</span><br><small style="font-size:10px;color:var(--text-mute);">重度加碼</small></td>
+          <td style="text-align:center;font-weight:700;color:#1A6B3A;font-size:15px;">100%<br>＋加碼</td>
+          <td style="font-family:'Noto Sans TC',sans-serif;font-size:12px;">部分商品對特定部位的重度癌症提供額外給付。全球PCH/XCF均有此設計，涵蓋：<strong>胃、結腸、肝、胰、肺、腦</strong></td>
+          <td style="font-family:'Noto Sans TC',sans-serif;font-size:12px;"><span class="hl">肺癌一期→全球XCF可加碼至150萬！</span></td>
+          <td style="text-align:center;font-weight:700;color:#1A6B3A;">100萬＋<br>加碼給付</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card" style="background:var(--gold-pale);border-color:#D9C08A;">
+    <span style="font-family:'Noto Sans TC',sans-serif;font-size:13px;color:#5C3D00;line-height:1.85;">
+      ⚠ <strong>關鍵提醒：</strong><span class="hl">肝癌和肺癌一旦確診第一期就是重度癌症，可以直接領100%保額</span>；但同樣好發的大腸癌第一期則是輕度，只能領15-20%。以本次保額設定100萬為例，差距高達80萬！這也是為什麼建議您保額要設定在150萬以上。
+    </span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+  SECTION 4：橫式比較
+══════════════════════════════════ -->
+<div class="section" id="compare">
+  <div class="sec-header">
+    <div class="sec-tag">SECTION 05</div>
+    <div class="sec-title">三家方案橫式比較</div>
+  </div>
+  <div class="sec-summary">📌 同樣的保費，保障差很多；同樣的保障，適合的癌症類型也不同——看清楚每個格子，就能找到最符合您情境的方案。</div>
+
+  <div class="cmp-wrap">
+    <table class="cmp-table">
+      <thead>
+        <tr>
+          <th class="hd-label">比較項目</th>
+          <th class="hd-shin">新光人壽<br><span style="font-size:10px;font-weight:400;">FCA＋C2＋J2A</span></th>
+          <th class="hd-glob">全球人壽<br><span style="font-size:10px;font-weight:400;">PCH＋XCF＋XDE</span></th>
+          <th class="hd-farr">遠雄人壽<br><span style="font-size:10px;font-weight:400;">FI5＋CJ2＋RQ1＋XCD</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-lbl">年繳保費</td>
+          <td style="text-align:center;font-size:16px;font-weight:700;">$21,132</td>
+          <td style="text-align:center;font-size:16px;font-weight:700;">$15,620</td>
+          <td class="best" style="text-align:center;font-size:16px;font-weight:700;">$8,200<span class="win-badge">最低</span></td>
+        </tr>
+        <tr>
+          <td class="row-lbl">主約類型</td>
+          <td><span class="tag tag-b">終身癌症主約</span><br>FCA 保額30萬，20年繳</td>
+          <td><span class="tag tag-g">終身療程型主約</span><br>PCH 1單位，30年繳</td>
+          <td><span class="tag tag-n">終身壽險主約</span><br>FI5 身故10萬，20年繳<br><span class="tag tag-r">無終身癌症主約</span></td>
+        </tr>
+        <tr>
+          <td class="row-lbl">等待期說明</td>
+          <td class="warn">90天等待期<br><span class="sub">⚠ <span class="hl">前2年罹癌僅退保費×1.06</span>，第3年才完整保額</span></td>
+          <td>90天（各附約一致）<span class="sub">XDE癌症類亦為90天</span></td>
+          <td>90天<span class="sub">CJ2第1年罹癌定額退費</span></td>
+        </tr>
+        <tr>
+          <td class="row-lbl">初期癌症<br><span style="font-size:10px;">(原位癌)</span></td>
+          <td>FCA：1.5萬＋C2：5萬<br><span class="sub">合計 6.5萬</span></td>
+          <td>PCH：1萬（第2年起）<br>XCF：10萬（第1年）<span class="sub">合計約 11萬</span></td>
+          <td class="best">CJ2：5萬＋RQ1：5萬<span class="win-badge">較高</span><br><span class="sub">合計 10萬＋XCD手術住院</span></td>
+        </tr>
+        <tr>
+          <td class="row-lbl">輕度癌症<br><span style="font-size:10px;">(如大腸癌一期)</span></td>
+          <td>FCA：4.5萬＋C2：15萬<br><span class="sub">合計 19.5萬</span></td>
+          <td>PCH：1萬＋XCF：20萬<br><span class="sub">合計 21萬</span></td>
+          <td class="best hi">CJ2：20萬＋RQ1：20萬<span class="win-badge">最高</span><br><span class="sub"><span class="hl">合計 40萬</span>＋XCD手術住院另計</span></td>
+        </tr>
+        <tr>
+          <td class="row-lbl">重度癌症<br><span style="font-size:10px;">(二期以上)</span></td>
+          <td>FCA：30萬＋C2：100萬<br><span class="sub">合計 130萬</span></td>
+          <td class="best hi">PCH：15萬＋XCF：100萬＋XDE：150萬<span class="win-badge">最高</span><br><span class="sub"><span class="hl">合計 265萬</span></span></td>
+          <td>CJ2：100萬＋RQ1：100萬＋XCD：60萬<br><span class="sub">合計 260萬＋住院手術</span></td>
+        </tr>
+        <tr>
+          <td class="row-lbl">特定部位癌症<br><span style="font-size:10px;">(肺/肝/胰/腦等)</span></td>
+          <td class="lo">無加給</td>
+          <td class="best hi">PCH：20萬＋XCF：150萬＋XDE：150萬<span class="win-badge">最高</span><br><span class="sub"><span class="hl">合計最高 320萬</span></span></td>
+          <td class="lo">無特定部位加碼<br><span class="sub">同重度標準計算</span></td>
+        </tr>
+        <tr>
+          <td class="row-lbl">住院手術補充</td>
+          <td>J2A：手術1.5萬<br>住院日額1,000元</td>
+          <td>PCH：手術2萬<br>住院日額1,000元<br>化放療1,000元/次</td>
+          <td class="best">XCD：手術18萬<span class="win-badge">最高</span><br>住院<span class="hl">7,200元/日</span><br>門診3,600元/次</td>
+        </tr>
+        <tr>
+          <td class="row-lbl">終身癌症保障</td>
+          <td><span class="tag tag-b">FCA終身</span><span class="sub">C2最高至80歲</span></td>
+          <td><span class="tag tag-g">PCH終身</span><span class="sub">XCF/XDE最高至80歲</span></td>
+          <td><span class="tag tag-r">無終身癌症主約</span><span class="sub">CJ2為五年定期</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+  SECTION 5：產品明細
+══════════════════════════════════ -->
+<div class="section" id="products">
+  <div class="sec-header">
+    <div class="sec-tag">SECTION 06</div>
+    <div class="sec-title">各方案產品明細</div>
+  </div>
+  <div class="sec-summary">📌 看完比較表，再用這一節確認每張保單的細節條款——特別留意等待期、第一年理賠限制、以及住院最高保障年齡。</div>
+
+  <!-- 新光 -->
+  <div class="co-block">
+    <div class="co-header shin">
+      <div class="co-name">新光人壽</div>
+      <div class="co-total">年繳合計 <span>$21,132 元</span></div>
+    </div>
+    <div class="prod-row">
+      <div class="prod-top">
+        <div><div class="prod-name">珍愛健康防癌終身保險（FCA）</div><div class="prod-meta">20年期｜保額 30萬｜終身保障至100歲｜銷售中 114/01/01起</div></div>
+        <div class="prod-right"><div class="prod-price">$11,580</div><div class="prod-period">年繳</div></div>
+      </div>
+      <div style="margin-bottom:6px;"><span class="tag tag-b">終身一次給付主約</span><span class="tag tag-y">⚠ 前2年罹癌僅退保費×1.06</span><span class="tag tag-n">第3年起完整保額</span></div>
+      <div class="claims-grid">
+        <div class="cl-item"><span class="cl-lbl">初期癌症</span><span class="cl-val">1.5萬（5%）</span></div>
+        <div class="cl-item"><span class="cl-lbl">輕度癌症</span><span class="cl-val">4.5萬（15%）</span></div>
+        <div class="cl-item"><span class="cl-val hi">重度癌症</span><span class="cl-val hi">30萬（100%）</span></div>
+        <div class="cl-item"><span class="cl-lbl">特定癌症</span><span class="cl-val lo">無加給</span></div>
+        <div class="cl-item"><span class="cl-lbl">住院／手術</span><span class="cl-val lo">無</span></div>
+        <div class="cl-item"><span class="cl-lbl">等待期</span><span class="cl-val warn">90天</span></div>
+      </div>
+    </div>
+    <div class="prod-row">
+      <div class="prod-top">
+        <div><div class="prod-name">新一年期防癌健康保險附約（C2）</div><div class="prod-meta">一年期｜保額 100萬｜最高保障至80歲｜銷售中 113/10/01起</div></div>
+        <div class="prod-right"><div class="prod-price">$2,720</div><div class="prod-period">年繳</div></div>
+      </div>
+      <div style="margin-bottom:6px;"><span class="tag tag-n">一年期定期附約</span><span class="tag tag-g">等待期90天</span></div>
+      <div class="claims-grid">
+        <div class="cl-item"><span class="cl-lbl">初期癌症</span><span class="cl-val">5萬（5%）</span></div>
+        <div class="cl-item"><span class="cl-lbl">輕度癌症</span><span class="cl-val">15萬（15%）</span></div>
+        <div class="cl-item"><span class="cl-val hi">重度癌症</span><span class="cl-val hi">100萬（100%）</span></div>
+        <div class="cl-item"><span class="cl-lbl">第1年罹癌</span><span class="cl-val lo">效力終止</span></div>
+      </div>
+    </div>
+    <div class="prod-row">
+      <div class="prod-top">
+        <div><div class="prod-name">珍愛御守終身防癌健康保險附約（J2A）</div><div class="prod-meta">30年期｜1單位｜終身保障（療程型）｜銷售中 114/01/01起</div></div>
+        <div class="prod-right"><div class="prod-price">$6,832</div><div class="prod-period">年繳</div></div>
+      </div>
+      <div style="margin-bottom:6px;"><span class="tag tag-b">終身療程型附約</span><span class="tag tag-g">住院手術有賠</span></div>
+      <div class="claims-grid">
+        <div class="cl-item"><span class="cl-lbl">輕度癌症</span><span class="cl-val">5,000元</span></div>
+        <div class="cl-item"><span class="cl-lbl">重度癌症</span><span class="cl-val">5萬</span></div>
+        <div class="cl-item"><span class="cl-lbl">癌症手術（最高）</span><span class="cl-val">1.5萬</span></div>
+        <div class="cl-item"><span class="cl-lbl">癌症住院／日</span><span class="cl-val">1,000元</span></div>
+        <div class="cl-item"><span class="cl-lbl">癌症身故</span><span class="cl-val">50萬</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 全球 -->
+  <div class="co-block">
+    <div class="co-header glob">
+      <div class="co-name">全球人壽</div>
+      <div class="co-total">年繳合計 <span>$15,620 元</span></div>
+    </div>
+    <div class="prod-row">
+      <div class="prod-top">
+        <div><div class="prod-name">臻愛一生防癌終身健康保險（PCH）</div><div class="prod-meta">30年期｜1單位｜終身保障（療程型主約）｜銷售中 112/02/09起</div></div>
+        <div class="prod-right"><div class="prod-price">$7,090</div><div class="prod-period">年繳</div></div>
+      </div>
+      <div style="margin-bottom:6px;"><span class="tag tag-b">終身療程型主約</span><span class="tag tag-g">特定部位加碼</span><span class="tag tag-g">住院手術有賠</span></div>
+      <div class="claims-grid">
+        <div class="cl-item"><span class="cl-lbl">低侵襲（初/輕）</span><span class="cl-val">1萬（第2年起）</span></div>
+        <div class="cl-item"><span class="cl-val hi">重度（非特定）</span><span class="cl-val hi">15萬</span></div>
+        <div class="cl-item"><span class="cl-val hi">重度（特定部位）</span><span class="cl-val hi">20萬</span></div>
+        <div class="cl-item"><span class="cl-lbl">住院手術</span><span class="cl-val">2萬</span></div>
+        <div class="cl-item"><span class="cl-lbl">住院日額</span><span class="cl-val">1,000元</span></div>
+        <div class="cl-item"><span class="cl-lbl">累計最高上限</span><span class="cl-val">150萬</span></div>
+      </div>
+    </div>
+    <div class="prod-row">
+      <div class="prod-top">
+        <div><div class="prod-name">臻心一意防癌一年期健康保險附約（XCF）</div><div class="prod-meta">一年期｜保額 100萬｜最高保障至80歲｜銷售中 113/03/25起</div></div>
+        <div class="prod-right"><div class="prod-price">$880</div><div class="prod-period">年繳</div></div>
+      </div>
+      <div style="margin-bottom:6px;"><span class="tag tag-g">特定部位癌症150萬</span><span class="tag tag-n">一次給付型附約</span></div>
+      <div class="claims-grid">
+        <div class="cl-item"><span class="cl-lbl">低侵襲（初/輕）</span><span class="cl-val">20萬（續保年度）</span></div>
+        <div class="cl-item"><span class="cl-val hi">重度癌症</span><span class="cl-val hi">100萬（續保年度）</span></div>
+        <div class="cl-item"><span class="cl-val hi">特定部位重度</span><span class="cl-val hi">150萬（續保年度）</span></div>
+        <div class="cl-item"><span class="cl-lbl">第1保單年度</span><span class="cl-val lo">低侵10萬／重度50萬</span></div>
+      </div>
+    </div>
+    <div class="prod-row">
+      <div class="prod-top">
+        <div><div class="prod-name">醫卡讚重大傷病一年期健康保險附約（XDE）</div><div class="prod-meta">一年期｜保額 150萬｜最高保障至80歲｜銷售中 114/01/01起</div></div>
+        <div class="prod-right"><div class="prod-price">$7,650</div><div class="prod-period">年繳</div></div>
+      </div>
+      <div style="margin-bottom:6px;"><span class="tag tag-b">重大傷病含重度癌症</span><span class="tag tag-g">癌症等待期90天</span></div>
+      <div class="claims-grid">
+        <div class="cl-val hi">重大傷病（含癌）</div><span class="cl-val hi">150萬</span>
+        <div class="cl-item"><span class="cl-lbl">特定重大傷病加給</span><span class="cl-val hi">＋30萬</span></div>
+        <div class="cl-item"><span class="cl-lbl">原位癌／輕度癌症</span><span class="cl-val lo">不賠（需重傷病卡）</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 遠雄 -->
+  <div class="co-block">
+    <div class="co-header farr">
+      <div class="co-name">遠雄人壽</div>
+      <div class="co-total">年繳合計 <span>$8,200 元</span></div>
+    </div>
+    <div class="prod-row">
+      <div class="prod-top">
+        <div><div class="prod-name">傳富新終身壽險（FI5）</div><div class="prod-meta">20年期｜保額 10萬｜終身保障（壽險主約）｜銷售中 114/01/01起</div></div>
+        <div class="prod-right"><div class="prod-price">$3,510</div><div class="prod-period">年繳</div></div>
+      </div>
+      <div style="margin-bottom:6px;"><span class="tag tag-n">壽險主約（搭載癌症附約用）</span></div>
+      <div class="claims-grid">
+        <div class="cl-item"><span class="cl-lbl">疾病身故</span><span class="cl-val">10萬</span></div>
+        <div class="cl-item"><span class="cl-lbl">意外身故</span><span class="cl-val">10萬</span></div>
+        <div class="cl-item"><span class="cl-lbl">癌症相關</span><span class="cl-val lo">由附約補充</span></div>
+      </div>
+    </div>
+    <div class="prod-row">
+      <div class="prod-top">
+        <div><div class="prod-name">愛家守護五年定期癌症健康保險附約（CJ2）</div><div class="prod-meta">5年期｜保額 100萬｜可續保至84歲｜銷售中 113/10/01起</div></div>
+        <div class="prod-right"><div class="prod-price">$1,790</div><div class="prod-period">年繳</div></div>
+      </div>
+      <div style="margin-bottom:6px;"><span class="tag tag-y">五年定期（非終身）</span><span class="tag tag-g">輕度最高20萬</span></div>
+      <div class="claims-grid">
+        <div class="cl-item"><span class="cl-lbl">初期（第2年起）</span><span class="cl-val">5萬（5%）</span></div>
+        <div class="cl-item"><span class="cl-val hi">輕度（第2年起）</span><span class="cl-val hi">20萬（20%）</span></div>
+        <div class="cl-item"><span class="cl-val hi">重度（第2年起）</span><span class="cl-val hi">100萬（100%）</span></div>
+        <div class="cl-item"><span class="cl-lbl">第1年罹癌</span><span class="cl-val lo">僅退定額保費</span></div>
+      </div>
+    </div>
+    <div class="prod-row">
+      <div class="prod-top">
+        <div><div class="prod-name">愛吉時一年定期癌症健康保險附約（RQ1）</div><div class="prod-meta">一年期｜保額 100萬｜最高保障至85歲｜銷售中 113/10/01起</div></div>
+        <div class="prod-right"><div class="prod-price">$140</div><div class="prod-period">年繳</div></div>
+      </div>
+      <div style="margin-bottom:6px;"><span class="tag tag-g">保費極低</span><span class="tag tag-n">一次給付型</span></div>
+      <div class="claims-grid">
+        <div class="cl-item"><span class="cl-lbl">初期（第1年）</span><span class="cl-val">5萬</span></div>
+        <div class="cl-item"><span class="cl-val hi">輕度（續保年度）</span><span class="cl-val hi">20萬</span></div>
+        <div class="cl-item"><span class="cl-val hi">重度（續保年度）</span><span class="cl-val hi">100萬</span></div>
+      </div>
+    </div>
+    <div class="prod-row">
+      <div class="prod-top">
+        <div><div class="prod-name">一年定期癌症健康保險附約（XCD）</div><div class="prod-meta">一年期｜6單位｜最高保障至70歲｜含癌症併發症｜銷售中 113/10/01起</div></div>
+        <div class="prod-right"><div class="prod-price">$2,760</div><div class="prod-period">年繳</div></div>
+      </div>
+      <div style="margin-bottom:6px;"><span class="tag tag-g">住院手術最高</span><span class="tag tag-g">含癌症併發症</span><span class="tag tag-y">最高至70歲</span></div>
+      <div class="claims-grid">
+        <div class="cl-item"><span class="cl-lbl">輕度癌症</span><span class="cl-val">9萬</span></div>
+        <div class="cl-item"><span class="cl-val hi">重度癌症</span><span class="cl-val hi">60萬</span></div>
+        <div class="cl-item"><span class="cl-val hi">癌症手術（最高）</span><span class="cl-val hi">18萬</span></div>
+        <div class="cl-item"><span class="cl-lbl">住院日額</span><span class="cl-val hi">7,200元</span></div>
+        <div class="cl-item"><span class="cl-lbl">住院補貼日額</span><span class="cl-val">3,600元</span></div>
+        <div class="cl-item"><span class="cl-lbl">門診治療／次</span><span class="cl-val">3,600元</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+  SECTION 6：理賠情境
+══════════════════════════════════ -->
+<div class="section" id="scenarios">
+  <div class="sec-header">
+    <div class="sec-tag">SECTION 07</div>
+    <div class="sec-title">理賠情境模擬</div>
+  </div>
+  <div class="sec-summary">📌 數字說話——同樣是35歲男性、同樣是癌症，不同的癌別、不同的方案，最後能拿到的錢可以差距超過200萬！</div>
+
+  <!-- 情境A -->
+  <div class="sc-card">
+    <div class="sc-head">
+      <div>
+        <div class="sc-title">情境 A｜大腸癌第一期（輕度癌症）<span class="win-badge">遠雄最佳 40萬＋</span></div>
+        <div class="sc-subtitle">35歲男性大腸癌好發前三名｜大腸鏡發現腫瘤｜屬「輕度癌症」，不符合重大傷病卡資格</div>
+      </div>
+      <a class="sc-link" href="https://orange.udn.com/orange/story/121197/9339170" target="_blank">參考來源 →</a>
+    </div>
+    <div class="sc-body">
+      <div class="case-box">
+        <strong>您的情況想像：</strong>您在公司健康檢查時接受大腸鏡篩查，發現升結腸有2公分腫瘤，切片確認為大腸腺癌。<strong>病理分期第一期（T1N0M0）</strong>，腫瘤局限腸壁，無淋巴轉移，預後佳。醫師建議腹腔鏡大腸切除手術，術後6個月化學治療追蹤。<br><strong>⚠ 依保單定義屬「癌症（輕度）—第一期大腸直腸癌」，<span class="hl">不符合重大傷病卡申請資格，XDE無法理賠</span>，此點務必留意！</strong>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot warn"></div><div class="tl-time">投保後第91天起</div><div class="tl-desc">等待期結束，完整保障正式生效</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">健康檢查日</div><div class="tl-desc">大腸鏡發現腫瘤 → 切片送病理，等待約7-14天</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">確診日</div><div class="tl-desc">確認大腸腺癌第一期，向保險公司申請「輕度癌症保險金」</div><div class="tl-money">▶ 遠雄：CJ2共20萬＋RQ1共20萬＝40萬（最高）</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">住院手術（約5-7天）</div><div class="tl-desc">腹腔鏡大腸切除 → 手術險＋住院日額啟動</div><div class="tl-money">▶ 遠雄XCD：手術18萬＋住院7,200元×6日≈4.3萬</div></div>
+        <div class="tl-item"><div class="tl-dot ok"></div><div class="tl-time">術後化療追蹤（6個月）</div><div class="tl-desc">門診化療每次可申請XCD門診治療保險金3,600元/次</div></div>
+      </div>
+      <div class="claim-summary">
+        <div class="cs-item"><div class="cs-co">新光（FCA＋C2）</div><div class="cs-amt">19.5萬</div></div>
+        <div class="cs-item"><div class="cs-co">全球（PCH＋XCF）</div><div class="cs-amt">21萬</div></div>
+        <div class="cs-item"><div class="cs-co">遠雄（CJ2＋RQ1＋XCD）</div><div class="cs-amt win">40萬＋</div></div>
+      </div>
+      <div class="total-bar">
+        <div class="total-lbl">遠雄最佳｜CJ2共20萬＋RQ1共20萬＋XCD手術18萬＋住院門診另計</div>
+        <div style="display:flex;align-items:center;gap:10px;"><span class="total-tag">最佳方案</span><span class="total-amt">40萬＋</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 情境B -->
+  <div class="sc-card">
+    <div class="sc-head">
+      <div>
+        <div class="sc-title">情境 B｜肝癌第一期（重度癌症）<span class="win-badge">全球最佳 265萬</span></div>
+        <div class="sc-subtitle">台灣癌症死亡率第二名｜B型肝炎帶原者高風險｜一期即屬重度，可申請重大傷病卡</div>
+      </div>
+      <a class="sc-link" href="https://www.smartbeb.com.tw/article/Cancer/id/908" target="_blank">參考來源 →</a>
+    </div>
+    <div class="sc-body">
+      <div class="case-box">
+        <strong>您的情況想像：</strong>您是B型肝炎帶原者，例行追蹤腹部超音波發現右葉肝臟3公分腫瘤，AFP指數升高，電腦斷層確認肝細胞癌。<strong>病理分期第一期（單顆腫瘤≤5cm，無血管侵犯，無轉移）</strong>。醫師建議腹腔鏡肝葉切除術，術後考慮口服標靶藥物，每月自費約4-6萬元。<br><strong>✅ <span class="hl">肝癌第一期即屬「重度癌症」，符合重大傷病卡申請資格，XDE可全額理賠150萬！</span></strong>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot warn"></div><div class="tl-time">投保後第91天起</div><div class="tl-desc">等待期結束，完整保障正式生效</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">腹部超音波追蹤日</div><div class="tl-desc">發現肝臟腫瘤 → 電腦斷層及切片，約2-3週</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">確診日</div><div class="tl-desc">確認肝細胞癌第一期 → 立即申請健保重大傷病卡（約2-4週核發）</div><div class="tl-money">▶ 全球：PCH重度15萬＋XCF重度100萬</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">重大傷病卡核發後</div><div class="tl-desc">持重大傷病卡申請XDE重大傷病保險金</div><div class="tl-money">▶ 全球XDE：一次給付 <span class="hl">150萬</span></div></div>
+        <div class="tl-item"><div class="tl-dot ok"></div><div class="tl-time">術後出院（住院7-14天）</div><div class="tl-desc">肝葉切除術 → 門診追蹤＋口服標靶藥物</div><div class="tl-money">▶ 總理賠 PCH15萬＋XCF100萬＋XDE150萬＝265萬</div></div>
+      </div>
+      <div class="claim-summary">
+        <div class="cs-item"><div class="cs-co">新光（FCA＋C2）</div><div class="cs-amt">130萬</div></div>
+        <div class="cs-item"><div class="cs-co">全球（PCH＋XCF＋XDE）</div><div class="cs-amt win">265萬</div></div>
+        <div class="cs-item"><div class="cs-co">遠雄（CJ2＋RQ1＋XCD）</div><div class="cs-amt">260萬＋</div></div>
+      </div>
+      <div class="total-bar">
+        <div class="total-lbl">全球最佳｜PCH共15萬＋XCF共100萬＋XDE共150萬</div>
+        <div style="display:flex;align-items:center;gap:10px;"><span class="total-tag">最佳方案</span><span class="total-amt">265萬</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 情境C -->
+  <div class="sc-card">
+    <div class="sc-head">
+      <div>
+        <div class="sc-title">情境 C｜肺癌第一期（特定部位重度癌症）<span class="win-badge">全球最佳 320萬</span></div>
+        <div class="sc-subtitle">台灣癌症死亡率第一名｜LDCT健檢常見意外發現｜一期屬重度且為特定部位，全球XCF加碼至150萬</div>
+      </div>
+      <a class="sc-link" href="https://www.insfeel.com.tw/article/%E7%99%8C%E7%97%87%E8%8A%B1%E8%B2%BB-%E5%8C%96%E7%99%82-%E6%94%BE%E7%99%82-%E6%89%8B%E8%A1%93" target="_blank">參考來源 →</a>
+    </div>
+    <div class="sc-body">
+      <div class="case-box">
+        <strong>您的情況想像：</strong>健康檢查LDCT低劑量CT發現右肺上葉1.8公分磨玻璃狀結節，PET-CT評估高度惡性，切片確認肺腺癌。<strong>病理分期第一期（T1bN0M0）</strong>。醫師建議VATS微創肺葉切除術，術後EGFR基因陽性，口服標靶藥Tagrisso，每月自費約5-8萬元。<br><strong>✅ <span class="hl">肺癌屬全球PCH/XCF「特定部位」，XCF理賠從100萬加碼至150萬！重大傷病卡申請後，XDE再給付150萬，合計320萬！</span></strong>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot warn"></div><div class="tl-time">投保後第91天起</div><div class="tl-desc">等待期結束，完整保障正式生效</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">LDCT健檢日</div><div class="tl-desc">發現肺部結節 → PET-CT及切片確認，約3週</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">確診日</div><div class="tl-desc">確認肺腺癌一期 → 立即申請重大傷病卡</div><div class="tl-money">▶ 全球：XCF <span class="hl">特定部位150萬</span>＋PCH特定部位20萬</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">重大傷病卡核發後</div><div class="tl-desc">申請XDE重大傷病保險金</div><div class="tl-money">▶ 全球XDE：一次給付 <span class="hl">150萬</span></div></div>
+        <div class="tl-item"><div class="tl-dot ok"></div><div class="tl-time">術後（住院5-10天）＋標靶追蹤</div><div class="tl-desc">VATS手術 → 口服標靶藥物長期追蹤</div><div class="tl-money">▶ 合計確認：PCH20萬＋XCF150萬＋XDE150萬＝<span class="hl">320萬</span></div></div>
+      </div>
+      <div class="claim-summary">
+        <div class="cs-item"><div class="cs-co">新光（FCA＋C2）</div><div class="cs-amt">130萬</div></div>
+        <div class="cs-item"><div class="cs-co">全球（PCH＋XCF＋XDE）</div><div class="cs-amt win">320萬</div></div>
+        <div class="cs-item"><div class="cs-co">遠雄（CJ2＋RQ1＋XCD）</div><div class="cs-amt">260萬＋</div></div>
+      </div>
+      <div class="total-bar">
+        <div class="total-lbl">全球最佳｜PCH特定20萬＋XCF特定150萬＋XDE重大傷病150萬</div>
+        <div style="display:flex;align-items:center;gap:10px;"><span class="total-tag">最佳方案</span><span class="total-amt">320萬</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 情境D -->
+  <div class="sc-card">
+    <div class="sc-head">
+      <div>
+        <div class="sc-title">情境 D｜口腔癌第二期（重度癌症）<span class="win-badge">全球最佳 265萬＋</span></div>
+        <div class="sc-subtitle">台灣男性癌症好發前五名｜吸菸嚼檳榔族群高風險｜住院天數長，療程型附約補充效果明顯</div>
+      </div>
+      <a class="sc-link" href="https://www.moodlight.com.tw/blog/detail/84" target="_blank">參考來源 →</a>
+    </div>
+    <div class="sc-body">
+      <div class="case-box">
+        <strong>您的情況想像：</strong>口腔黏膜出現白斑及潰瘍逾3週不癒，至口腔外科切片確認舌側鱗狀細胞癌。<strong>病理分期第二期（T2N0M0，腫瘤2-4cm，無頸部淋巴轉移）</strong>。醫師建議廣泛切除合併頸部淋巴廓清術，術後6-7週放射線治療（30-35次）。<br><strong>✅ <span class="hl">口腔癌第二期屬重度癌症，可申請重大傷病卡；住院天數長，療程型XCD住院日額7,200元/日效果明顯！</span></strong>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot warn"></div><div class="tl-time">投保後第91天起</div><div class="tl-desc">等待期結束，完整保障正式生效</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">口腔科就診日</div><div class="tl-desc">切片送病理 → 等待約1週</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">確診日</div><div class="tl-desc">確認口腔癌二期 → 申請重大傷病卡＋各一次給付型保險金</div><div class="tl-money">▶ 全球：XDE 150萬＋XCF重度100萬＋PCH重度15萬</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">住院手術（約14-21天）</div><div class="tl-desc">廣泛切除＋頸部廓清術 → 住院日額及手術險啟動</div><div class="tl-money">▶ PCH手術2萬＋住院1,000元×14日＝1.4萬</div></div>
+        <div class="tl-item"><div class="tl-dot ok"></div><div class="tl-time">術後放射治療（6-7週）</div><div class="tl-desc">門診放療30-35次，每次申請PCH化放療保險金1,000元</div><div class="tl-money">▶ 合計超過 265萬（含住院放療補充）</div></div>
+      </div>
+      <div class="claim-summary">
+        <div class="cs-item"><div class="cs-co">新光（FCA＋C2）</div><div class="cs-amt">130萬</div></div>
+        <div class="cs-item"><div class="cs-co">全球（PCH＋XCF＋XDE）</div><div class="cs-amt win">265萬＋</div></div>
+        <div class="cs-item"><div class="cs-co">遠雄（CJ2＋RQ1＋XCD）</div><div class="cs-amt">260萬＋</div></div>
+      </div>
+      <div class="total-bar">
+        <div class="total-lbl">全球最佳｜PCH共15萬＋XCF共100萬＋XDE共150萬＋住院手術放療另計</div>
+        <div style="display:flex;align-items:center;gap:10px;"><span class="total-tag">最佳方案</span><span class="total-amt">265萬＋</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notice">
+    <strong>注意事項：</strong>① 比較表及情境均以第二保單年度起完整保額計算；② 全球XDE須取得健保重大傷病卡方可理賠——<strong>原位癌及輕度癌症（如大腸癌一期）不符合申請資格，此點請務必向客戶說明</strong>；③ 遠雄CJ2為五年定期附約，到期需重新核保；④ 遠雄XCD最高保障至70歲；⑤ 全球特定部位癌症範圍：胃、結腸、肝、胰、肺、腦（重度）；⑥ 理賠金額為說明示意，實際依各公司核保結果、保單條款及送件文件為準；⑦ 理賠所需文件：診斷書、病理報告、重大傷病卡（XDE適用）、住院收據等；⑧ 資料來源：衛福部112年癌症登記報告（2025.12.30）。
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-text">
+    本建議書資料來源：新光人壽、全球人壽、遠雄人壽各商品條款及費率表<br>
+    癌症統計數據：衛生福利部國民健康署 112年癌症登記報告（2025.12.30公布）<br>
+    參考網站：MY83保險專欄・SmartBeb・Roo.Cash・InsFeel保險感・橘世代・明朗診所・Hello醫師<br>
+    延伸影片：<a href="https://www.youtube.com/watch?v=FtlU59Tx_e0&t=343s" target="_blank" style="color:var(--gold-light);">YouTube — 癌症險怎麼買攻略</a>
+  </div>
+  <div class="footer-gold">CANCER INSURANCE<br>PLANNING REPORT<br>2026 APRIL</div>
+</div>
+
+</body>
+</html>
